@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="sam.css">
+  <link rel="icon" href="AH-ICON.png" type="image/png">
+  <title>Display & Signage</title>
+ </head>
+<body>
+
+<!-- Background -->
+ <div class="background-slider">
+    <img src="BACK4.jpg" class="active" alt="Slide 1" />
+    <img src="BACK5.webp" alt="Slide 2" />
+    <img src="back14.webp" alt="Slide 3" />
+    <img src="back15.jpg" alt="Slide 4" />
+    <img src="BACK10.jpg" alt="Slide 5" />
+    <img src="BACK9.png" alt="Slide 6" />
+    <img src="BACK7.png" alt="Slide 7" />
+    <img src="BACK6.jpg" alt="Slide 8" />
+  </div>
+<!-- Main Content -->
+<div class="overlay-content">
+  <div class="logo-container">
+    <div class="letter letter-a">A</div>
+    <div class="letter letter-h">H</div>
+  </div>
+  <div class="header1-3d">Display & Signage</div>
+
+  <nav class="main-menu">
+    <a href="services.html">Back to Services</a>
+  </nav>
+
+  <div class="gallery">
+    <img src="lfp1.jpg" alt="Image 1" />
+    <img src="lfp9.jpg" alt="Image 2" />
+    <img src="lfp11.jpg" alt="Image 1" />
+    <img src="lfp7.jpg" alt="Image 2" />
+    <img src="lfp5.jpg" alt="Image 2" />
+    <img src="lfp6.jpg" alt="Image 1" />
+    <img src="lfp2.jpg" alt="Image 2" />
+    <img src="lfp8.jpg" alt="Image 1" />
+    <img src="lfp10.jpg" alt="Image 1" />   
+   
+        <!-- Add more images as needed -->
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <h2>Aswanster Holdings Limited</h2>
+    <p>Syokimau - Katani Rd, Nairobi, Kenya</p>
+    <a href="https://maps.app.goo.gl/BFed46AjG9XGWDPb9">Live location</a>
+    <p>Email: aswanstebranding@gmail.com</p>
+    <p>Call: +254 74214665 / +254 716010927</p>
+  </div>
+</footer>
+
+<!-- Background Script -->
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".background-slider img");
+
+  setInterval(() => {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+  }, 4000);
+</script>
+<script>
+  leturrentIndex = 0;
+  constslides = document.querySelectorAll(".background-slider img");
+
+  setInterval(() => {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+  }, 4000); // Change image every 4 seconds
+</script>
+
+
+</body>
+</html>

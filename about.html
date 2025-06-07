@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Aswanster Holdings Limited</title>
+  <!-- Place this inside the <head> tag -->
+  <link rel="icon" href="AH-ICON.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Background Slider -->
+  <div class="background-slider">
+    <img src="BACK4.jpg" class="active" alt="Slide 1" />
+    <img src="BACK5.webp" alt="Slide 2" />
+    <img src="back14.webp" alt="Slide 3" />
+    <img src="back15.jpg" alt="Slide 4" />
+    <img src="BACK10.jpg" alt="Slide 5" />
+    <img src="BACK9.png" alt="Slide 6" />
+    <img src="BACK7.png" alt="Slide 7" />
+    <img src="BACK6.jpg" alt="Slide 8" />
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="main-menu">
+    <ul>
+   <li><a href="home.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+     <li><a href="contact.html">ContactUS</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay Content -->
+  <div class="overlay-content">
+    <div class="logo-container">
+      <div class="letter letter-a">A</div>
+      <div class="letter letter-h">H</div>
+    </div>
+    <div class="header1-3d">ASWANSTER HOLDINGS LIMITED</div>
+    <div class="header1-3d">PRINTING • GRAPHICS • BRANDING</div>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <br>
+      <br>
+      <p><strong>Our Mission</strong></p>
+      <br>
+      <img src="mission.jpg" alt="Mission">
+      <p>To help our clients convey a powerful and consistent message that reflects the value of their company's products and services. We aim to create unique and creative design works by optimizing our potential and resources.</p>
+      <br>
+      <p><strong>Our Vision</strong></p>
+      <br>
+      <img src="vission.jpg" alt="Vision">
+      <p>To be the leading branding media agency specializing in creative design, branding, and advertising services in East Africa and beyond.</p>
+      <br>
+      <p><strong>Core Values</strong></p> 
+      <br>
+      <img src="ourcore values.jpg" alt="Core Values">
+      <ul>
+        <li>Competence and professionalism</li>
+        <li>Commitment to service delivery</li>
+        <li>Transparency and accountability</li>
+        <li>Teamwork and commitment</li>
+        <li>Integrity and confidentiality</li>
+      </ul>
+      <br>
+      <p><strong>Philosophy</strong></p>
+      <br>
+      <img src="philosophy.jpg" alt="Philosophy">
+      <p>At Aswanster Holdings, relationships are our top priority. We believe that good relationships with stakeholders are a prerequisite to success.</p>
+      <br>
+      <p><strong>Testimonials</strong> "Aswanster is the best!" – Happy Client</p>
+      <br>
+      <p><strong>About Us</strong></p>
+      <br>
+      <br>
+      <img src="about us.jpg" alt="About Us">
+      <br>
+      <p>Aswanster Holdings Limited was registered on May 3, 2013 under the Company Act 486, Section 14. We are creative gurus, enthusiastic intellectuals, and pragmatic designers who love telling stories that strengthen the relationship between an organization and its audience.</p>
+      <br>
+      <p><strong>Board of Directors</strong></p>
+      <br>
+      <img src="aswan.jpg" alt="Aswan Caleb" width="250" height="255">
+      <p>Name: Aswanster Caleb<br>
+      Title: Founder & CEO, ASWANSTER HOLDINGS LIMITED<br>
+      Profession: Cybersecurity Expert & Tech Entrepreneur</p>
+    </section>
+     </div>
+
+  <!-- Footer -->
+ <footer class="footer">
+  <div class="footer-content">
+    <h2>Aswanster Holdings Limited</h2>
+    <p>Syokimau - Katani Rd, Nairobi, Kenya</p>
+    <a href="https://maps.app.goo.gl/BFed46AjG9XGWDPb9" target="_blank">Live location</a>
+    <p>Email: aswanstebranding@gmail.com</p>
+    <p>Call: +254 74214665 / +254 716010927</p>
+  </div>
+</footer>
+  <!-- JavaScript -->
+   <script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".background-slider img");
+
+  setInterval(() => {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+  }, 4000); // Change image every 4 seconds
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
