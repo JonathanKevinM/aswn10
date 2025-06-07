@@ -1,0 +1,319 @@
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #f0f0f0;
+  height: 10%;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: contain; /* Show whole image, keep size */
+  background-color: white; /* Background for non-filled space */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 5px; /* optional: space inside image box */
+}
+
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+
+    /* Background Slider */
+    .background-slider {
+      margin-top: 10px;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .background-slider img {
+      position: absolute;
+      width: 100%;
+      height: 90%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      object-fit: cover;
+        }
+
+
+    .background-slider img.active {
+      opacity: 1;
+    }
+
+/* Navigation */
+.main-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(2, 68, 66, 0.95);
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.main-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-menu li:hover {
+  background-color: #037571;
+}
+
+/* Logo */
+.logo-container {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin: 2rem auto;
+}
+
+.letter {
+  font-size: 120px;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+}
+
+.letter-a {
+  color: #1e1f7a;
+  left: 0;
+  z-index: 2;
+}
+
+.letter-h {
+  color: #1a9b90;
+  left: 50px;
+  z-index: 1;
+}
+
+/* Header */
+.header1-3d {
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 600;
+  color: #30ed94;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  user-select: none;
+  text-shadow:
+    3px 3px 0 #01205a,
+    5px 5px 0 #026b56,
+    6px 6px 5px rgba(0, 0, 0, 0.3);
+  margin: 1rem 0;
+}
+
+/* Overlay Content */
+.overlay-content {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #30ed94;
+  text-align: center;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+section p, section ul, section li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+.services-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.services-flex a {
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  background-color: #024442;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  flex: 0 1 30%;        /* About 3 per row on large screens */
+  max-width: 200px;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
+}
+
+.services-flex a:hover {
+  background-color: #037571;
+}
+
+/* ✅ For small screens */
+@media (max-width: 768px) {
+  .services-flex {
+    justify-content: flex-start; /* Align left */
+    padding-left: 1rem;
+    margin-right: 10px;
+  }
+
+  .services-flex a {
+    flex: 0 1 45%; /* Two items per row */
+    text-align: left; /* Optional: left-align text */
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #020c0e;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-content h2 {
+  color: #049c8d;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content p {
+  margin: 0.2rem 0;
+  color: #ccc;
+}
+
+/* Contact */
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-menu {
+    width: auto;
+    top: 1rem;
+    right: 1rem;
+    left: auto;
+    border-radius: 8px;
+  }
+
+  .main-menu ul {
+    flex-direction: column;
+  }
+
+  .services-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    width: 80vw;
+  }
+}
+.location a {
+  color:#049c8d ; /* Default color */
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.location a:hover {
+  color: #00014e; /* Hover color */
+}
+
+.location a:visited {
+  color: #888; /* Visited color */
+}
+/* Make social icons and links horizontal */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Ensure content is scrollable on small devices */
+.overlay-content {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Optional: Make background slider cover full screen height */
+@media (max-width: 768px) {
+  .background-slider img {
+    height: 100vh;
+  }
+}

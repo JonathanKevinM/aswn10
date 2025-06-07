@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+  <!-- Place this inside the <head> tag -->
+  <link rel="icon" href="AH-ICON.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Background Slider -->
+  <div class="background-slider">
+    <img src="BACK4.jpg" class="active" alt="Slide 1" />
+    <img src="BACK5.webp" alt="Slide 2" />
+    <img src="back14.webp" alt="Slide 3" />
+    <img src="back15.jpg" alt="Slide 4" />
+    <img src="BACK10.jpg" alt="Slide 5" />
+    <img src="BACK9.png" alt="Slide 6" />
+    <img src="BACK7.png" alt="Slide 7" />
+    <img src="BACK6.jpg" alt="Slide 8" />
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="main-menu">
+    <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+     <li><a href="contact.html">ContactUS</a></li>
+    </ul>
+  </nav>
+  <!-- Overlay Content -->
+  <div class="overlay-content">
+    <div class="logo-container">
+      <div class="letter letter-a">A</div>
+      <div class="letter letter-h">H</div>
+    </div>
+    <div class="header1-3d">ASWANSTER HOLDINGS LIMITED</div>
+    <div class="header1-3d">PRINTING • GRAPHICS • BRANDING</div>
+
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <h3>Click on any services for more</h3>
+      <div class="services-flex">
+        <a href="digitalprinting.html">Digital Printing</a>
+        <a href="sublimation.html">Sublimation</a>
+        <a href="vinlyprinting.html">Vinyl Printing</a>
+        <a href="uvprinting.html">UV Printing</a>
+        <a href="screenprinting.html">Screen Printing</a>
+        <a href="embroidery.html">Embroidery</a>
+        <a href="display&signage.html">Display & Signage</a>
+        <a href="largefromatprinting.html">Large Format Printing</a>
+        <a href="engraving.html">Engraving</a>
+        <a href="digitalmedia.html">Digital Media</a>
+        <a href="electronics.html">Electronics</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+  </div>
+
+  <!-- Footer -->
+ <footer class="footer">
+  <div class="footer-content">
+    <h2>Aswanster Holdings Limited</h2>
+    <p>Syokimau - Katani Rd, Nairobi, Kenya</p>
+    <a href="https://maps.app.goo.gl/BFed46AjG9XGWDPb9" target="_blank">Live location</a>
+    <p>Email: aswanstebranding@gmail.com</p>
+    <p>Call: +254 74214665 / +254 716010927</p>
+  </div>
+</footer>
+  <!-- JavaScript -->
+   <script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".background-slider img");
+
+  setInterval(() => {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+  }, 4000); // Change image every 4 seconds
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
